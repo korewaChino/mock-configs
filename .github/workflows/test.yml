@@ -1,4 +1,6 @@
 name: Build RPM
+permissions:
+  contents: read
 on:
   workflow_dispatch:
   push:
