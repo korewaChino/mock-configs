@@ -7,7 +7,7 @@ config_opts['plugin_conf']['yum_cache_enable'] = True
 config_opts['chroot_setup_cmd'] = 'install bash bzip2 coreutils cpio diffutils redhat-release findutils gawk glibc-minimal-langpack grep gzip info patch redhat-rpm-config rpm-build sed tar unzip util-linux which xz epel-rpm-macros epel-release'
 config_opts['dist'] = 'el{{ releasever }}'  # only useful for --resultdir variable subst
 config_opts['buildroot_image_ready'] = True
-config_opts['buildroot_image'] = 'ghcr.io/terrapkg/builder:f{{ releasever }}'
+config_opts['buildroot_image'] = 'ghcr.io/terrapkg/builder:el{{ releasever }}'
 
 config_opts['dnf.conf'] = """
 [main]
