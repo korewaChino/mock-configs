@@ -5,9 +5,8 @@ config_opts['dist'] = 'fc{{ releasever }}'  # only useful for --resultdir variab
 config_opts['macros']['%dist'] = '.fc{{ releasever }}'
 config_opts['package_manager'] = 'dnf5'
 config_opts['extra_chroot_dirs'] = [ '/run/lock', ]
-config_opts['use_bootstrap'] = False
-#config_opts['bootstrap_image'] = 'ghcr.io/terrapkg/builder:f{{ releasever }}'
-#config_opts['bootstrap_image_ready'] = True
+config_opts['buildroot_image'] = 'ghcr.io/terrapkg/builder:f{{ releasever }}'
+#config_opts['buildroot_image_ready'] = True
 config_opts['mirrored'] = config_opts['target_arch'] != 'i686'
 config_opts['chroot_setup_cmd'] = 'install @{% if mirrored %}buildsys-{% endif %}build anda-srpm-macros'
 config_opts['plugin_conf']['root_cache_enable'] = True
